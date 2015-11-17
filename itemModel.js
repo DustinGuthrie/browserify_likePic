@@ -7,7 +7,8 @@ module.exports = Backbone.Model.extend({
   idAttribute: '_id',
   defaults: {
     photo: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3w8fg7LF70qKbuenUajbXftLf7EYPdyMmOXLgajaZrQW6xa7gIg',
-    title: "Really cool Default title"
+    title: "Really cool Default title",
+    likes: 0
   },
   initialize: function () {
 

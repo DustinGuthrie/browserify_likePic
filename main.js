@@ -27,6 +27,7 @@ var picPage = {
 // item.save();
 // $('section').html('<h1>' + item.get('title') + '</h1>')
 // $('section').html('<img src=' + item.get('photo') + '>')
+
 init: function (){
   picPage.initEvents();
   picPage.loadExisting();
@@ -36,7 +37,8 @@ initEvents: function () {
     event.preventDefault();
     var newPicPost = {
       title: $('#title').val(),
-      photo: $('#photo').val()
+      photo: $('#photo').val(),
+      // likes: $('')
     };
     var post = new ItemModel(newPicPost);
     post.save();
@@ -46,11 +48,20 @@ initEvents: function () {
 
   // $('.button').on('click','.delete',function (event) {
   //   console.log("this is happening - delete pic");
+  // event.preventDefault();
+
   //         var $deleteBtn = $(this);
   //         var picID = $deleteBtn.closest('article').data('index');
   //         chatPage.deleteChat(chatID,$deleteBtn);
   // });
-  
+
+  // $('.button').on('click','.like',function (event) {
+  //   console.log("this is happening - liked a pic");
+  //   event.preventDefault();
+  //
+  //
+  // });
+
 },
 
 loadPics: function(data) {
